@@ -67,12 +67,12 @@ function imageRotation(userChoice) {
         imageComp.src = '../Assest/Images/comp-Scissors.png'
         break;
     }
-    
+    game(userChoice ,getFromComputer)
   }, 2400);
 }
 
-function game(userChoice) {
-  const userComp = userChoice+computerChoice()
+function game(userChoice, getFromComputer) {
+  const userComp = userChoice+getFromComputer
   
   switch (userComp) {
     case 'RockScissors':
@@ -93,4 +93,19 @@ function game(userChoice) {
       draw()
       break;
   }
+}
+
+function win() {
+  winCount++
+  document.getElementById('win').innerHTML = winCount
+}
+
+function lose() {
+  loseCount++
+  document.getElementById('lose').innerHTML = loseCount
+}
+
+function draw() {
+  drawCount++
+  document.getElementById('draw').innerHTML = drawCount
 }
