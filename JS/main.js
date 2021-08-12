@@ -5,6 +5,7 @@ const scissors = document.getElementById('scissors')
 let winCount = 0
 let drawCount = 0
 let loseCount = 0
+let round = 1
 
 eventListeners()
 function eventListeners() {
@@ -97,15 +98,39 @@ function game(userChoice, getFromComputer) {
 
 function win() {
   winCount++
+  round++
   document.getElementById('win').innerHTML = winCount
+  document.getElementById('round-counter').innerHTML = round
+  result('You Win!')
 }
 
 function lose() {
   loseCount++
+  round++
   document.getElementById('lose').innerHTML = loseCount
+  document.getElementById('round-counter').innerHTML = round
+  result('You Lose!')
 }
 
 function draw() {
   drawCount++
+  round++
   document.getElementById('draw').innerHTML = drawCount
+  document.getElementById('round-counter').innerHTML = round
+  result('Draw!')
+}
+
+function result(res) {
+  const resSection = document.querySelector('.winner')
+  const div = document.createElement('div')
+  div.classList.add('winner-content')
+  div.innerHTML += `
+      <hr>
+      <div class="result">
+        <p>${round - 1}</p>
+        <span>${res}</span>
+      </div>
+  `
+
+  resSection.appendChild(div)
 }
