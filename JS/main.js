@@ -121,6 +121,11 @@ function draw() {
 }
 
 function result(res) {
+  const resDivs = document.querySelector('.winner')
+  if(resDivs.children.length >= 3) {
+    resDivs.children[0].remove()
+  }
+
   const resSection = document.querySelector('.winner')
   const div = document.createElement('div')
   div.classList.add('winner-content')
