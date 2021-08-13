@@ -77,14 +77,12 @@ function game(userChoice, getFromComputer) {
     case "RockScissors":
     case "PaperRock":
     case "ScissorsPaper":
-      document.getElementsByClassName('.first').style.Color = '#c8002b'
       win();
       break;
 
     case "RockPaper":
     case "PaperScissors":
     case "ScissorsRock":
-      document.querySelector('.second').style.color = '#c8002b'
       lose();
       break;
 
@@ -146,6 +144,10 @@ function rounds(we, they) {
   let paperIcon
   let paperCompIcon
 
+  if (roundSection.children.length >= 3) {
+    roundSection.children[0].remove();
+  }
+
   switch (we) {
     case "Paper":
       paperIcon = `<i class="roundPIcon far fa-hand-paper"></i>`;
@@ -177,9 +179,9 @@ function rounds(we, they) {
   div.innerHTML += `
     <hr>
     <div class="rounds-content">
-      <p class="first">${paperIcon}</p>
+      <p>${paperIcon}</p>
       <span>${round - 1}</span>
-      <p class="second">${paperCompIcon}</p>
+      <p>${paperCompIcon}</p>
     </div>
   `;
 
