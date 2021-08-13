@@ -132,7 +132,7 @@ body {
 }
 
 .middle .winner {
-  height: 140px;
+  height: 160px;
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
@@ -159,10 +159,6 @@ body {
 
 .game-section img {
   width: 70%;
-}
-
-.counter {
-  margin: 20px 0;
 }
 
 .winner .winner-content {
@@ -198,4 +194,65 @@ body {
   font-size: 1.2rem;
   font-weight: 500;
   color: #485460;
+}
+
+.roundPIcon {
+  transform: rotate(90deg);
+}
+
+.roundNIcon {
+  transform: rotate(270deg) rotateY(180deg);
+}
+
+.roundGoodIcon {
+  transform: rotateY(180deg);
+}
+
+.roundBadIcon {
+  transform: rotateY(-180deg);
+}
+
+.counter-rounds {
+  margin: 0 0 20px;
+  height: 200px;
+  width: 100%;
+}
+
+.counter-rounds .mainIcons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.counter-rounds .mainIcons hr {
+  margin: 0;
+
+}
+
+.rounds-content {
+  display: flex;
+  margin: 10px 0 0;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.rounds-content span{
+  font-size: 1.3rem;
+  color: #c8002b;
+  font-weight: 700;
+}
+
+.rounds-content p {
+  font-size: 1.7rem;
+}
+
+.first {
+  color: #c8002b;
+}
+
+.second {
+  color: #c8002b;
 }
