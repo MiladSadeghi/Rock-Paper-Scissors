@@ -256,3 +256,47 @@ body {
 .second {
   color: #c8002b;
 }
+
+.rounds-responsive {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.rounds-responsive .choice{
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+.rounds-responsive .choice span{
+  background-color: #c8002b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+  .main .contianer {
+    width: 90%;
+  }
+  .game-section img {
+    width: 100%;
+  }
+  .we-choice-content, .bot-choice-content{
+    display: none;
+  }
+  .rounds-responsive {
+    display: flex;
+  }
+}
