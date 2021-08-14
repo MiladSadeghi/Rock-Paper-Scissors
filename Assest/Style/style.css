@@ -263,6 +263,7 @@ body {
   width: 100%;
   align-items: center;
   justify-content: space-around;
+  margin: 40px 0;
 }
 
 .rounds-responsive .choice{
@@ -284,6 +285,10 @@ body {
   height: 60px;
   cursor: pointer;
   color: #fff;
+}
+
+.middle2 {
+  display: none;
 }
 
 @media screen and (max-width: 900px) {
