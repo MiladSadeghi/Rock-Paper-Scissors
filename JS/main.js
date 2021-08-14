@@ -16,10 +16,9 @@ eventListeners();
 function eventListeners() {
   rock.addEventListener("click", () => imageRotation("Rock"));
   rock2.addEventListener("click", () => imageRotation("Rock"));
-
+  
   paper.addEventListener("click", () => imageRotation("Paper"));
   paper2.addEventListener("click", () => imageRotation("Paper"));
-  
   scissors.addEventListener("click", () => imageRotation("Scissors"));
   scissors2.addEventListener("click", () => imageRotation("Scissors"));
 }
@@ -149,6 +148,7 @@ function result(res) {
 
 function rounds(we, they) {
   const roundSection = document.querySelector(".counter-rounds");
+  const roundSection2 = document.querySelector(".counter-rounds2");
   const div = document.createElement("div");
   div.classList.add('mainIcons')
   let paperIcon
@@ -156,6 +156,7 @@ function rounds(we, they) {
 
   if (roundSection.children.length >= 3) {
     roundSection.children[0].remove();
+    roundSection2.children[0].remove();
   }
 
   switch (we) {
@@ -196,4 +197,5 @@ function rounds(we, they) {
   `;
 
   roundSection.appendChild(div);
+  roundSection2.appendChild(div.cloneNode(true));
 }
