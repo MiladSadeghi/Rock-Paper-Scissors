@@ -1,6 +1,11 @@
-const rock = document.getElementById("rock");
-const paper = document.getElementById("paper");
-const scissors = document.getElementById("scissors");
+const rock = document.querySelector("#rock");
+const rock2 = document.querySelector("#rock2");
+
+const paper = document.querySelector("#paper");
+const paper2 = document.querySelector("#paper2");
+
+const scissors = document.querySelector("#scissors");
+const scissors2 = document.querySelector("#scissors2");
 
 let winCount = 0;
 let drawCount = 0;
@@ -10,8 +15,13 @@ let round = 1;
 eventListeners();
 function eventListeners() {
   rock.addEventListener("click", () => imageRotation("Rock"));
+  rock2.addEventListener("click", () => imageRotation("Rock"));
+
   paper.addEventListener("click", () => imageRotation("Paper"));
+  paper2.addEventListener("click", () => imageRotation("Paper"));
+  
   scissors.addEventListener("click", () => imageRotation("Scissors"));
+  scissors2.addEventListener("click", () => imageRotation("Scissors"));
 }
 
 function computerChoice() {
