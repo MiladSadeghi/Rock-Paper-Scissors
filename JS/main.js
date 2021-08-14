@@ -128,12 +128,13 @@ function draw() {
 }
 
 function result(res) {
-  const resDivs = document.querySelector(".winner");
-  if (resDivs.children.length >= 3) {
-    resDivs.children[0].remove();
+  const resSection = document.querySelector(".winner");
+  const resSection2 = document.querySelector(".winner2");
+  if (resSection.children.length >= 3) {
+    resSection.children[0].remove();
+    resSection2.children[0].remove();
   }
 
-  const resSection = document.querySelector(".winner");
   const div = document.createElement("div");
   div.classList.add("winner-content");
   div.innerHTML += `
@@ -144,6 +145,7 @@ function result(res) {
       </div>
   `;
   resSection.appendChild(div);
+  resSection2.appendChild(div.cloneNode(true));
 }
 
 function rounds(we, they) {
