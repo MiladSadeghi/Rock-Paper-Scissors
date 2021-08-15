@@ -32,8 +32,8 @@ function computerChoice() {
 function imageRotation(userChoice) {
   const imageUs = document.querySelector(".we-choice img");
   const imageComp = document.querySelector(".bot-choice img");
-  imageUs.src = "../Assest/Images/Rock.png";
-  imageComp.src = "../Assest/Images/comp-Rock.png";
+  imageUs.src = "Assest/Images/Rock.png";
+  imageComp.src = "Assest/Images/comp-Rock.png";
 
   const getFromComputer = computerChoice();
 
@@ -60,18 +60,18 @@ function imageRotation(userChoice) {
   setTimeout(() => {
     switch (userChoice) {
       case "Paper":
-        imageUs.src = "../Assest/Images/Paper.png";
+        imageUs.src = "Assest/Images/Paper.png";
         break;
       case "Scissors":
-        imageUs.src = "../Assest/Images/Scissors.png";
+        imageUs.src = "Assest/Images/Scissors.png";
         break;
     }
     switch (getFromComputer) {
       case "Paper":
-        imageComp.src = "../Assest/Images/comp-Paper.png";
+        imageComp.src = "Assest/Images/comp-Paper.png";
         break;
       case "Scissors":
-        imageComp.src = "../Assest/Images/comp-Scissors.png";
+        imageComp.src = "Assest/Images/comp-Scissors.png";
         break;
     }
     game(userChoice, getFromComputer);
